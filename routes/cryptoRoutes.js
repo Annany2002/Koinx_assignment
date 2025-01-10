@@ -25,7 +25,7 @@ router.get("/stats", async (req, res) => {
     });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: "Internal server error" });
+    res.status(500).json(error);
   }
 });
 
@@ -52,7 +52,7 @@ router.get("/deviation", async (req, res) => {
     res.json({ deviation });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: "Internal server error" });
+    res.status(500).json(error);
   }
 });
 
